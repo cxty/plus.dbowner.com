@@ -1,0 +1,41 @@
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB_inviteCodeLang.js" ></script>
+
+<div class="ic_lang_box ">
+	<div class="ic_lang_title">{$Lang.LangTitle}:</div>
+	<form id="ic_lang" method="post" action="/codeAjax/addInviteCodeClass">
+	<input type="hidden" name="PlugInCode" value="{$smarty.get.PlugInCode}" />
+	<input type="hidden" name="PlugInName" value="{$smarty.get.PlugInName}" />
+	<input type="hidden" name="view" value="{$smarty.get.view}" />
+	<div class="ic_lang_ct w_350" id="ic_lang_ct">
+		{if $listInfo}
+			{foreach item=item from=$listInfo}
+				<div class="ic_lang_row w_350">
+					<div class="ic_lang_row_left w_150">{$Lang.LangName}：<span>{$item.LangName}</span></div>
+					<div class="ic_lang_row_center w_150">{$Lang.LangCode}：<span>{$item.LangCode}</span></div>
+					<div class="ic_lang_row_right w_40"><a href="javascript:void(0);" onclick="javascript:inviteCodeLang.delLangRow(this,{$item.LangClassID});">{$Lang.Delete}</a></div>		
+				</div>
+			{/foreach}
+		{/if}
+		<div class="ic_lang_row w_350">
+			<div class="ic_lang_row_left w_150">{$Lang.LangName}：<input type="text" class="input" size="10" name="LangName[]" /></div>
+			<div class="ic_lang_row_center w_150">{$Lang.LangCode}：<input type="text" class="input" size="10" name="LangCode[]" /></div>
+			<div class="ic_lang_row_right w_40"><a href="javascript:void(0);" onclick="javascript:inviteCodeLang.addLangRow();">{$Lang.Add}</a></div>
+		</div>
+	</div>
+	<div class="in_lang_btn w_350"><a class="btn" href="javascript:void(0);" onclick="javascript:inviteCodeLang.doSubmit();">{$Lang.Submit}</a></div>
+	</form>
+</div>
+
+<script language="javascript" type="text/javascript">
+var inviteCodeLang = new TinviteCodeLang();
+inviteCodeLang.JS_LANG = {$JS_LANG};
+//页面完全再入后初始化
+$(document).ready(function(){
+	inviteCodeLang.init();
+});
+//释放
+$(window).unload(function(){
+	inviteCodeLang = null;
+});
+</script>

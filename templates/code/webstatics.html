@@ -1,0 +1,67 @@
+{include file='header.html'}
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB_webstatics.js" ></script>
+
+<div class="flo_nav_box">
+	<div class="flo_top_bar">
+		<a href="/code">{$Lang.Index}</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="{$inCodeUrl}">{$smarty.get.PlugInName}</a>
+	</div>
+	<ul style="display:none;">
+		<li {if $view == 'list'}class="flo_selected"{/if}><span><a href="/code/{$smarty.get.PlugInCode}?PlugInCode={$smarty.get.PlugInCode}&PlugInName={$smarty.get.PlugInName}&view=list">{$Lang.List}</a></span></li>
+		<li {if $view == 'remind'}class="flo_selected"{/if}><span><a href="/code/{$smarty.get.PlugInCode}?PlugInCode={$smarty.get.PlugInCode}&PlugInName={$smarty.get.PlugInName}&view=remind">{$Lang.InviteCodeRemind}</a></span></li>
+		<li {if $view == 'class'}class="flo_selected"{/if}><span><a href="/code/{$smarty.get.PlugInCode}?PlugInCode={$smarty.get.PlugInCode}&PlugInName={$smarty.get.PlugInName}&view=class">{$Lang.InviteCodeClass}</a></span></li>	
+	</ul>
+</div>
+<div class="incode_box">
+	<div class="tb_list">
+		<div class="tb_list_title">
+			<dl class="w_40"><input type="checkbox" id="checkAllSelect" /></dl>
+			<dl class="w_350">{$Lang.PlatformName}</dl>
+			<dl class="w_200">{$Lang.IdentCode}</dl>
+			<dt class="w_150">{$Lang.Time}</dt>	
+			<dt class="w_150">{$Lang.Mandle}</dt>		
+		</div>
+		<ul id="tb_list">
+			{if $listInfo}
+				{foreach item=item key=key from=$listInfo}
+					<li id="list_{$key}">
+						<dl class="w_40"><input type="checkbox" value="{$item.webStaticID}" /></dl>
+						<dl class="w_350">{$item.pWebName}</dl>
+						<dl class="w_200">{$item.pStaticsCode}</dl>
+						<dt class="w_150">{$item.UpdateTime|date_format:"%Y-%m-%d %H:%M"}</dt>
+						<dt class="w_150">
+							<a href="javascript:void(0);" class="modClick">{$Lang.Modify}</a>
+							|&nbsp;&nbsp;<a href="javascript:void(0);" class="delClick">{$Lang.Delete}</a>
+							|&nbsp;&nbsp;<a target="_blank" href="/webStatics/web-{$item.pStaticsCode}">{$Lang.CheckStatics}</a>
+						</dt>
+					</li>
+				{/foreach}
+			{/if}
+		</ul>
+		<div class="showpage">
+			<div class="l_bar">
+				<a href="javascript:void(0);" id="add_btn">{$Lang.Add}</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="javascript:void(0);" id="del_btn">{$Lang.Delete}</a>
+			</div>
+			<div class="r_bar">{$showpage}</div>
+		</div>
+	</div>
+</div>
+
+<script language="javascript" type="text/javascript">
+var webstatics = new Twebstatics();
+webstatics.JS_LANG = {$JS_LANG};
+//页面完全再入后初始化
+$(document).ready(function(){
+	webstatics.init();
+});
+//释放
+$(window).unload(function(){
+	webstatics = null;
+});
+</script>
+
+{include file='footer.html'}

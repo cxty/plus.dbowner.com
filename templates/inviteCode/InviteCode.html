@@ -1,0 +1,20 @@
+{include file='header_iframe.html'}
+
+<div class="flo_nav_box">
+	<ul>
+		<li {if $view == 'list'}class="flo_selected"{/if}><span><a href="/inviteCode?PlugInCode={$smarty.get.PlugInCode}&PlugInName={$smarty.get.PlugInName}&view=list">{$Lang.InviteCodeList}</a></span></li>
+		<li {if $view == 'remind'}class="flo_selected"{/if}><span><a href="/inviteCode?PlugInCode={$smarty.get.PlugInCode}&PlugInName={$smarty.get.PlugInName}&view=remind">{$Lang.InviteCodeRemind}</a></span></li>
+		<li {if $view == 'class'}class="flo_selected"{/if}><span><a href="/inviteCode?PlugInCode={$smarty.get.PlugInCode}&PlugInName={$smarty.get.PlugInName}&view=class">{$Lang.InviteCodeClass}</a></span></li>	
+	</ul>
+</div>
+<div class="incode_box">
+	{if $view == 'list'}	
+		{include file="inviteCode/inviteCodeList.html"}
+	{elseif $view == 'remind'}
+		{include file="inviteCode/inviteCodeState.html"}
+	{elseif $view == 'class'}
+		{include file="inviteCode/inviteCodeLang.html"}
+	{/if}
+</div>
+
+{include file='footer_iframe.html'}

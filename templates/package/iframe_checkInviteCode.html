@@ -1,0 +1,32 @@
+{include file='header_fancybox.html'}
+
+<script language="javascript" type="text/javascript" src="{$__PUBLIC__}/js/DB_checkInviteCode.js"></script>
+
+<div class="lg_incode">
+	<div class="lg_title">{$Lang.CheckInviteCode}</div>
+	<div class="lg_ctn mg_top_25">
+		<input type="text" class="input_big w_invicode" id="inviteCode" value="{$InviteCode}" {if {$InviteCode}}readonly{/if} />
+	</div>
+	<div class="lg_btn">
+		<div class="input_sub" id="submit_btn"><span>{$Lang.Active}</span></div>
+	</div>
+</div>
+
+<iframe id="inCodeFarme" src="#" style="display:none;"></iframe>
+
+<script language="javascript">
+//document.domain = "www.dbowner.com";
+checkInviteCode = new TcheckInviteCode();
+checkInviteCode.JS_LANG = {$JS_LANG};
+checkInviteCode.aurl = '{$aurl}';
+//页面完全再入后初始化
+$(document).ready(function(){
+	checkInviteCode.init();
+});
+//释放
+$(window).unload(function(){
+	checkInviteCode = null;
+});
+</script>
+
+{include file='footer_fancybox.html'}

@@ -1,0 +1,9 @@
+2013-01-23 09:21:44 | 127.0.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-23 11:46:02 | 127.0.0.1 | /index.php/code/InviteCode |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT count(*) FROM `` <br>
+						<b>错误详情</b>: Incorrect table name ''<br>
+						<b>错误代码</b>:1103<br>
+2013-01-23 11:46:03 | 127.0.0.1 | /index.php/code/InviteCode |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT count(*) FROM `` <br>
+						<b>错误详情</b>: Incorrect table name ''<br>
+						<b>错误代码</b>:1103<br>

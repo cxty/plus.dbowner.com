@@ -1,0 +1,24 @@
+{include file='header2.html'}
+
+<script src="{$__PUBLIC__}/plugin/Highcharts/js/highcharts.js"></script>
+<script src="{$__PUBLIC__}/plugin/Highcharts/js/modules/exporting.js"></script>
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB.webStaticsPlugIn.js"></script>
+
+<div id="container" style="width: 1000px; height: 400px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+var webStaticsPlugIn = new TwebStaticsPlugIn();
+webStaticsPlugIn.JS_LANG = {$JS_LANG};
+webStaticsPlugIn.udata = {$udata};
+//页面完全载入后初始化
+$(document).ready(function(){
+	webStaticsPlugIn.init();
+});
+//释放
+$(window).unload(function(){
+	webStaticsPlugIn = null;
+});
+</script>
+
+{include file='footer2.html'}

@@ -1,0 +1,29 @@
+{include file='header2.html'}
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB_addInviteCode.js" ></script>
+
+<div class="incode_box_fancybox">
+	<div class="tb_list">
+		<div class="tb_list_cnt tb_list_h_30">
+			<dl class="w_80">{$Lang.AppID}</dl>
+			<dl class="w_200"><input type="text" class="input" size="40" id="appID" /></dl>		
+			<dl class="w_120 mr_left clo_red" id="rmd_appID"></dl>
+		</div>
+		<div class="tb_list_btn"><a href="javascript:addInviteCode.addInviteCode()" class="btn">{$Lang.Add}</a></div>
+	</div>
+</div>
+
+<script language="javascript" type="text/javascript">
+var addInviteCode = new TaddInviteCode();
+addInviteCode.JS_LANG = {$JS_LANG};
+//页面完全再入后初始化
+$(document).ready(function(){
+	addInviteCode.init();
+});
+//释放
+$(window).unload(function(){
+	addInviteCode = null;
+});
+</script>
+
+{include file='footer2.html'}

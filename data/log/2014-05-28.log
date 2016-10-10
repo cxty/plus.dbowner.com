@@ -1,0 +1,16 @@
+2014-05-28 09:35:23 | 218.104.232.181 | /index.php/soap/plugInSoap |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT * FROM `tbInviteCodeInfo`  WHERE AppInfoID = '' and TUID 'MU51U2Vpd3NTaUU9'<br>
+						<b>错误详情</b>: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''MU51U2Vpd3NTaUU9'' at line 1<br>
+						<b>错误代码</b>:1064<br>
+2014-05-28 09:35:29 | 192.168.0.197 | /index.php/soap/plugInSoap |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT * FROM `tbInviteCodeInfo`  WHERE AppInfoID = '80002001' and TUID 'UGlPQ3BET29VYUV3OE50TWVFTDN2Zz09'<br>
+						<b>错误详情</b>: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''UGlPQ3BET29VYUV3OE50TWVFTDN2Zz09'' at line 1<br>
+						<b>错误代码</b>:1064<br>
+2014-05-28 09:35:31 | 192.168.0.197 | /index.php/soap/plugInSoap |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT * FROM `tbInviteCodeInfo`  WHERE AppInfoID = '80002001' and TUID 'UGlPQ3BET29VYUV3OE50TWVFTDN2Zz09'<br>
+						<b>错误详情</b>: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''UGlPQ3BET29VYUV3OE50TWVFTDN2Zz09'' at line 1<br>
+						<b>错误代码</b>:1064<br>
+2014-05-28 09:35:31 | 192.168.0.197 | /index.php/soap/plugInSoap |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT * FROM `tbInviteCodeInfo`  WHERE AppInfoID = '80002001' and TUID 'UGlPQ3BET29VYUV3OE50TWVFTDN2Zz09'<br>
+						<b>错误详情</b>: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''UGlPQ3BET29VYUV3OE50TWVFTDN2Zz09'' at line 1<br>
+						<b>错误代码</b>:1064<br>

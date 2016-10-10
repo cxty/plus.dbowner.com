@@ -1,0 +1,36 @@
+2013-02-20 14:13:25 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:14:06 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:14:13 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-02-20 14:14:14 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-02-20 14:14:14 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-02-20 14:14:46 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:14:47 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:15:22 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:15:24 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:16:16 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:16:17 | 192.168.0.1 | /index.php/soap/plugInSoap |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'127.0.0.1' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-02-20 14:20:29 | 192.168.0.1 | /index.php/qrCode/dirGetQRCode |qrCode模块不存在

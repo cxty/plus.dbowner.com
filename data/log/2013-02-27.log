@@ -1,0 +1,6 @@
+2013-02-27 11:02:03 | 203.208.60.42 | /index.php/robots.txt |robots.txt模块不存在
+2013-02-27 15:57:51 | 192.168.0.1 | /index.php/code/InviteCode |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT LangClassID,LangName,LangCode FROM `tbInviteCodeLangClassInfo` <br>
+						<b>错误详情</b>: Table 'plus_db.tbinvitecodelangclassinfo' doesn't exist<br>
+						<b>错误代码</b>:1146<br>
+2013-02-27 15:57:51 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在

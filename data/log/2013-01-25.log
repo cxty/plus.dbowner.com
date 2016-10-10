@@ -1,0 +1,34 @@
+2013-01-25 11:47:16 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 14:15:38 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 14:15:38 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 14:15:38 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 15:11:51 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 15:11:51 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 15:11:51 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 15:12:19 | 192.168.0.1 | /index.php/login/setLoginInfo |	<b>出错</b>: 无法连接到数据库服务器<br>
+						<b>SQL</b>: <br>
+						<b>错误详情</b>: Access denied for user 'root'@'localhost' (using password: NO)<br>
+						<b>错误代码</b>:1045<br>
+2013-01-25 15:14:49 | 192.168.0.1 | /index.php/login/setLoginInfo |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT UID,GroupID,uPermission FROM `tbUserInfo`  WHERE  `UserID`='MTJCMndZcFlWODg9' <br>
+						<b>错误详情</b>: No database selected<br>
+						<b>错误代码</b>:1046<br>
+2013-01-25 15:16:02 | 192.168.0.1 | /index.php/login/setLoginInfo |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT UID,GroupID,uPermission FROM `tbUserInfo`  WHERE  `UserID`='MTJCMndZcFlWODg9' <br>
+						<b>错误详情</b>: No database selected<br>
+						<b>错误代码</b>:1046<br>
+2013-01-25 15:16:20 | 192.168.0.1 | /index.php/login/setLoginInfo |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT UID,GroupID,uPermission FROM `tbUserInfo`  WHERE  `UserID`='MTJCMndZcFlWODg9' <br>
+						<b>错误详情</b>: No database selected<br>
+						<b>错误代码</b>:1046<br>
+2013-01-25 15:16:21 | 192.168.0.1 | /index.php/login/setLoginInfo |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT UID,GroupID,uPermission FROM `tbUserInfo`  WHERE  `UserID`='MTJCMndZcFlWODg9' <br>
+						<b>错误详情</b>: No database selected<br>
+						<b>错误代码</b>:1046<br>
+2013-01-25 15:16:22 | 192.168.0.1 | /index.php/login/setLoginInfo |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT UID,GroupID,uPermission FROM `tbUserInfo`  WHERE  `UserID`='MTJCMndZcFlWODg9' <br>
+						<b>错误详情</b>: No database selected<br>
+						<b>错误代码</b>:1046<br>
+2013-01-25 17:00:17 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 17:00:17 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-01-25 17:00:17 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在

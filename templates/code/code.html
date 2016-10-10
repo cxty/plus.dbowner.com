@@ -1,0 +1,32 @@
+{include file='header.html'}
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB_plugInCode.js" ></script>
+
+<div class="code_box">
+	<div class="plugIn_list" id="plugIn_list">
+		{if $listInfo}
+			{foreach item=item from=$listInfo}
+				<div class="plugIn_info" code="{$item.PlugInCode}" name="{$item.PlugInName}" >  
+					<a href="/code/main?code={$item.PlugInCode}&name={$item.PlugInName}" class="img_list tiptip_plus" title="<div class='wb'><span class='fw_b'>{$Lang.PlugInState}</span>:{$item.pPlugInState}</div>" ><img src-data="{$item.pIcoCode_128}" src="{$__PUBLIC__}/images/loading_128.gif"></a>
+					<div class="plugIn_state"><a href="javascript:void(0);" class="tiptip_plus"></a>{$item.PlugInName}（{$item.PlugInCode}）</div>
+				</div>
+			{/foreach}
+		{/if}	
+	</div>	
+	<div class="showpage">{$showpage}</div>
+</div>
+
+<script language="javascript" type="text/javascript">
+var plugInCode = new TplugInCode();
+plugInCode.JS_LANG = {$JS_LANG};
+//页面完全再入后初始化
+$(document).ready(function(){
+	plugInCode.init();
+});
+//释放
+$(window).unload(function(){
+	plugInCode = null;
+});
+</script>
+
+{include file='footer.html'}

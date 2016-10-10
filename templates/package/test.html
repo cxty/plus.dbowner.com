@@ -1,0 +1,43 @@
+{include file='header_fancybox.html'}
+
+
+
+{include file='footer_fancybox.html'}
+
+<script>
+var fbox = new Tfbox();
+fbox.client_id = '80022003';
+fbox.user_id = 'ajQ3VGU2NVRtOGh4WHlhWWZtSXhGQT09';
+//页面完全再入后初始化
+$(document).ready(function(){
+	fbox.init();
+});
+//释放
+$(window).unload(function(){
+	active = null;
+});
+
+function Tfbox(){
+	this.client_id = '';
+	this.user_id = '';
+}
+Tfbox.prototype.init = function(){
+	fbox.showFancybox();
+};
+Tfbox.prototype.showFancybox = function(){
+	$.fancybox({
+	    type: 'iframe',
+	    href: '/inviteCode/check?client_id='+fbox.client_id+'&user_id='+fbox.user_id,
+	    scrolling: 'no',
+	    width: 500,
+	    height: 500,
+	    autoScale: false,
+	    centerOnScroll: true,
+	    hideOnOverlayClick: false,
+	});
+};
+Tfbox.prototype.close = function(){
+	$.fancybox.close();
+	window.location.reload();
+} 
+</script>

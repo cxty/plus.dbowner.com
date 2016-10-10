@@ -1,0 +1,12 @@
+2014-10-11 15:00:10 | 218.104.232.181 | /index.php/soap/plugInSoap |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT count(*) FROM `tbPageStaticsInfo`  WHERE Status = 0 and date_format(from_unixtime(pAppendTime), '%Y-%m-%d %H') = '2014-10-11 15'<br>
+						<b>错误详情</b>: Unknown column 'pAppendTime' in 'where clause'<br>
+						<b>错误代码</b>:1054<br>
+2014-10-11 15:00:28 | 218.104.232.181 | /index.php/soap/plugInSoap |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT count(*) FROM `tbPageStaticsInfo`  WHERE Status = 0 and date_format(from_unixtime(pAppendTime), '%Y-%m-%d %H') = '2014-10-11 15'<br>
+						<b>错误详情</b>: Unknown column 'pAppendTime' in 'where clause'<br>
+						<b>错误代码</b>:1054<br>
+2014-10-11 15:00:30 | 218.104.232.181 | /index.php/soap/plugInSoap |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT count(*) FROM `tbPageStaticsInfo`  WHERE Status = 0 and date_format(from_unixtime(pAppendTime), '%Y-%m-%d %H') = '2014-10-11 15'<br>
+						<b>错误详情</b>: Unknown column 'pAppendTime' in 'where clause'<br>
+						<b>错误代码</b>:1054<br>

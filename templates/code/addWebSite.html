@@ -1,0 +1,37 @@
+{include file='header2.html'}
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB_addWebSite.js" ></script>
+
+<div class="webstatics_box_fancybox">
+	<div class="tb_list">
+		<input type="hidden" id="webStaticID" value="{$smarty.get.webStaticID}" />
+		<div class="tb_list_cnt tb_list_h_30">
+			<dl class="w_80">{$Lang.WebName}</dl>
+			<dl class="w_200"><input type="text" class="input" size="53" id="webName" value="{$listInfo.pWebName}" /></dl>		
+			<dl class="w_120 mr_left clo_red" id="rmd_appID"></dl>
+		</div>
+		<div class="tb_list_cnt tb_list_h_40">
+			<dl class="w_80">{$Lang.WebStaticsCode}</dl>
+			<dl class="w_200">
+				<textarea id="staticCode" cols="38" rows="10" readonly>{$listInfo.webSiteCode}</textarea>
+			</dl>		
+			<dl class="w_120 mr_left clo_red" id="rmd_appID"></dl>
+		</div>
+		<div class="tb_list_btn"><a href="javascript:void(0)" id="sub_btn" class="btn">{$Lang.Submit}</a></div>
+	</div>
+</div>
+
+<script language="javascript" type="text/javascript">
+var addWebSite = new TaddWebSite();
+addWebSite.JS_LANG = {$JS_LANG};
+//页面完全再入后初始化
+$(document).ready(function(){
+	addWebSite.init();
+});
+//释放
+$(window).unload(function(){
+	addWebSite = null;
+});
+</script>
+
+{include file='footer2.html'}

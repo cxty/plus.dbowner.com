@@ -1,0 +1,35 @@
+2013-06-09 07:20:15 | 66.249.72.136 | /index.php/robots.txt |robots.txt模块不存在
+2013-06-09 14:52:25 | 192.168.0.1 | /index.php/code/webstatics |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT count(*) FROM `tbPageStaticsInfo`  WHERE Status = 0<br>
+						<b>错误详情</b>: Table 'plus_db.tbpagestaticsinfo' doesn't exist<br>
+						<b>错误代码</b>:1146<br>
+2013-06-09 14:52:25 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-06-09 14:52:25 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-06-09 14:52:25 | 192.168.0.1 | /index.php/favicon.ico |favicon.ico模块不存在
+2013-06-09 14:53:48 | 192.168.0.1 | /index.php/code/webstatics |	<b>出错</b>: MySQL Query Error<br>
+						<b>SQL</b>: SELECT count(*) FROM `tbPageStaticsInfo`  WHERE Status = 0<br>
+						<b>错误详情</b>: Table 'plus_db.tbpagestaticsinfo' doesn't exist<br>
+						<b>错误代码</b>:1146<br>
+2013-06-09 14:55:13 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:55:42 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:55:51 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:56:24 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:56:26 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:56:28 | 192.168.0.1 | /index.php/webStatics |webStatics模块不存在
+2013-06-09 14:56:43 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:56:58 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:57:14 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:57:23 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:57:52 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:57:58 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 14:58:12 | 192.168.0.1 | /index.php/webStatics/addWebSite |webStatics模块不存在
+2013-06-09 15:00:10 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:04:21 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:04:28 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:04:53 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:06:05 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:09:43 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:10:20 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:11:12 | 192.168.0.1 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在
+2013-06-09 15:26:29 | 112.64.235.86 | /index.php/webStatics |index操作方法在webStatics模块中不存在
+2013-06-09 15:30:10 | 101.226.51.230 | /index.php/webstatics/addWebSiteCode |webstatics模块不存在

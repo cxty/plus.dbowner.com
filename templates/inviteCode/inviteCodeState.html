@@ -1,0 +1,57 @@
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB_inviteCodeLangState.js" ></script>
+
+<div class="ic_lang_box" >
+	<div class="ic_lang_title">{$Lang.Explain}：（{$Lang.ExplainContent}）</div>
+	<form id="ic_lang" method="post" action="/codeAjax/addInviteCodeLang">
+	<input type="hidden" name="PlugInCode" value="{$smarty.get.PlugInCode}" />
+	<input type="hidden" name="PlugInName" value="{$smarty.get.PlugInName}" />
+	<input type="hidden" name="view" value="{$smarty.get.view}" />
+	<input type="hidden" name="listCount" value="{$listCount}" />
+	<input type="hidden" name="langStr" value="{$langStr}" />
+	<input type="hidden" name="LangID" id="LangID" value="{$listInfo.radio.LangID}" />
+	<input type="hidden" name="radio" id="radio" value="0" />
+	<div class="ic_lang_ct w_600" id="ic_lang_ct">
+		{if $listInfo}		
+			{foreach item=item key=key from=$listInfo.list}
+				<span>
+					{foreach item=item2 key=key2 from=$langInfo}
+						<div class="ic_lang_row w_600">
+							<input type="hidden" value="{$item[$item2.LangCode].LangID}" />
+							<div class="ic_lang_row_left w_80"><div class="rd">{if $key2 == 0}<input type="radio" name="default" {if $key == $listInfo.radio.checked}checked="checked"{/if}  />{else}&nbsp;&nbsp;&nbsp;&nbsp;{/if}</div>{$item2.LangName}：</div>
+							<div class="ic_lang_row_center w_450">{$item[$item2.LangCode].LangState}</div>
+							<div class="ic_lang_row_right w_40">{if $key2 == 0}<a href="javascript:void(0);" onclick="javascript:inviteCodeLangState.delLangRow(this);">{$Lang.Delete}</a>{/if}</div>					
+						</div>
+					{/foreach}	
+				</span>
+			{/foreach}	
+		{/if}
+		{if $langInfo}
+			<span>
+			{foreach item=item key=key from=$langInfo}
+				<div class="ic_lang_row w_600">
+					<div class="ic_lang_row_left w_80"><div class="rd">{if $key == 0}<input type="radio" name="default" {if !$listInfo}checked="checked"{/if} />{else}&nbsp;&nbsp;&nbsp;&nbsp;{/if}</div>{$item.LangName}：</div>
+					<div class="ic_lang_row_center w_450"><input type="text" class="input" size="80" name="{$item.LangCode}_state[]" /></div>
+					<div class="ic_lang_row_right w_40">{if $key == 0}<a href="javascript:void(0);" onclick="javascript:inviteCodeLangState.addLangRow(this,0);">{$Lang.Add}</a>{/if}</div>		
+				</div>
+			{/foreach}
+			</span>
+		{/if}
+	</div>
+	<div class="in_lang_btn"><a class="btn" href="javascript:void(0);" onclick="javascript:inviteCodeLangState.doSubmit();">{$Lang.Submit}</a></div>
+	</form>
+</div>		
+		
+<script language="javascript" type="text/javascript">
+var inviteCodeLangState = new TinviteCodeLangState();
+inviteCodeLangState.JS_LANG = {$JS_LANG};
+inviteCodeLangState.langJson  = {$langJson};
+//页面完全再入后初始化
+$(document).ready(function(){
+	inviteCodeLangState.init();
+});
+//释放
+$(window).unload(function(){
+	inviteCodeLangState = null;
+});
+</script>

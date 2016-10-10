@@ -1,0 +1,40 @@
+{include file='header.html'}
+
+<div class="main_top_box"></div>
+
+<iframe src ="/{$cdata.code}" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" height="600" id="ifm" name="ifm" onload="javascript:dyniframesize('ifm');" width="100%"></iframe> 
+
+
+<script language="javascript" type="text/javascript"> 
+$.fancybox.showLoading();
+var isOnLoad = true; 
+$('#ifm').load(function() { 
+	isOnLoad = false;// 加载完成 
+	$.fancybox.hideLoading();
+}); 
+
+function dyniframesize(down) { 
+	var pTar = null; 
+	if (document.getElementById){ 
+		pTar = document.getElementById(down); 
+	}else{ 
+		eval('pTar = ' + down + ';'); 
+	} 
+	if (pTar && !window.opera){ 
+		//begin resizing iframe 
+		pTar.style.display="block" 
+		if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight){ 
+			//ns6 syntax 
+			pTar.height = pTar.contentDocument.body.offsetHeight + 50; 
+			pTar.width = pTar.contentDocument.body.scrollWidth; 
+		} 
+		else if (pTar.Document && pTar.Document.body.scrollHeight){ 
+			//ie5+ syntax 
+			pTar.height = pTar.Document.body.scrollHeight + 50; 
+			pTar.width = pTar.Document.body.scrollWidth; 
+		} 
+	} 
+} 
+</script>
+
+{include file='footer.html'}

@@ -1,0 +1,61 @@
+{include file='header_iframe.html'}
+
+  <link href="{$__ROOT__}/public/css/TestApi.css" rel="stylesheet" type="text/css"></link>
+  <script type="text/javascript" src="{$__ROOT__}/public/js/jquery-1.7.2.js"></script> 
+  <script type="text/javascript" src="{$__ROOT__}/public/js/TestApi.js"></script> 
+
+    <div class="center_box">
+        
+
+<div class="main">
+
+<div class="left">
+ 
+  <div>
+ <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;API项目:</span>
+   <span>
+     <select>
+      <option>绑定的第三方平台</option>
+      <option>发布信息</option>
+      <option>关注</option>
+     </select>
+    </span>
+   </div>
+  
+ <!--   <div><span>提交方式:</span>POST<input type="radio" checked="checked" name="submit"></input>GET<input type="radio" name="submit"></input></div>-->
+  <div><span>accesss_token:</span><span><input type="text" id="accesss_token"></input></span></div>
+  <div class="get_providers">
+  <!--  <div><span>appid:</span><span><input type="text" id="appid"></input></span></div>
+  <div><span>client_secret:</span><span><input type="text" id="client_secret"></input></span></div>
+  <div><span>redirect_uri: </span><span><input type="text"  id="redirect_uri"></input></span></div>  -->
+  
+  </div>
+  
+  <div class="send_msg">
+  
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;providers: <input type="text" id="providers"></input></div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content: <input type="text" id="content"></input></div>
+  </div>
+  
+  <div class="attention">
+
+  <div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;providers: </span><span><input type="text" id="providers1"></input></span></div>
+  <div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: </span><span><input type="text" id="name"></input></span></div>
+  </div>
+  
+  <div><input type="submit" value='提交' id="btn"></input></div> 
+</div>
+
+<div class="right">
+     <div>提交参数：</div>
+     <div><textarea class="textarea_a"></textarea></div>
+     
+     <div>返回结果：</div>
+     <div><textarea class="textarea_b"></textarea></div>
+</div>
+
+
+</div>
+        
+    </div>
+{include file='footer_iframe.html'}

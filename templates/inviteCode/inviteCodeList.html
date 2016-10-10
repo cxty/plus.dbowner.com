@@ -1,0 +1,54 @@
+
+<script type="text/javascript" src="{$__PUBLIC__}/js/DB_inviteCode.js" ></script>
+
+<div class="tb_list">
+	<div class="tb_list_title">
+		<dl class="w_40"><input type="checkbox" id="checkAllSelect" /></dl>
+		<dl class="w_100">{$Lang.AppID}</dl>
+		<dl class="w_100">{$Lang.FUserName}</dl>
+		<dl class="w_100">{$Lang.TUserName}</dl>
+		<dl class="w_180">{$Lang.InviteCode}</dl>
+		<dl class="w_100">{$Lang.Mandle}</dl>
+		<dt class="w_150">{$Lang.UserTime}</dt>
+		<dt class="w_150">{$Lang.AppendTime}</dt>			
+	</div>
+	<ul id="tb_list">
+		{if $listInfo}
+			{foreach item=item key=key from=$listInfo}
+				<li id="list_{$key}">
+					<dl class="w_40"><input type="checkbox" value="{$item.InviteCodeID}" /></dl>
+					<dl class="w_100">{$item.AppInfoID}</dl>
+					<dl class="w_100">{if $item.fUserName}{$item.fUserName}{else}&nbsp;{/if}</dl>
+					<dl class="w_100">{if $item.tUserName}{$item.tUserName}{else}&nbsp;{/if}</dl>
+					<dl class="w_180">{$item.InviteCode}</dl>
+					<dl class="w_100">
+						<a href="javascript:inviteCode.del({$key},'{$item.InviteCodeID}')">{$Lang.Delete}</a>
+					</dl>
+					<dt class="w_150">{if $item.iUseTime}{$item.iUseTime|date_format:"%Y-%m-%d %H:%M"}{else}{$Lang.NotUsed}{/if}</dt>
+					<dt class="w_150">{$item.iAppendTime|date_format:"%Y-%m-%d %H:%M"}</dt>
+				</li>
+			{/foreach}
+		{/if}
+	</ul>
+	<div class="showpage">
+		<div class="l_bar">
+			<a href="javascript:void(0);" onclick="javascript:inviteCode.addInviteCode();">{$Lang.Add}</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="javascript:void(0);" onclick="javascript:inviteCode.delInviteCode();">{$Lang.Delete}</a>
+		</div>
+		<div class="r_bar">{$showpage}</div>
+	</div>
+</div>
+
+<script language="javascript" type="text/javascript">
+var inviteCode = new TinviteCode();
+inviteCode.JS_LANG = {$JS_LANG};
+//页面完全再入后初始化
+$(document).ready(function(){
+	inviteCode.init();
+});
+//释放
+$(window).unload(function(){
+	inviteCode = null;
+});
+</script>

@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://plus.dbowner.com/ManagePlugIn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ManagePlugIn" targetNamespace="http://plus.dbowner.com/ManagePlugIn/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://plus.dbowner.com/ManagePlugIn/">
+      <xsd:element name="Auth">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AuthResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="SelectUserInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SelectUserInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateUserInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateUserInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserInfoList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserInfoListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertUserInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertUserInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteUserInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteUserInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="SelectInviteCodeInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SelectInviteCodeInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateInviteCodeInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateInviteCodeInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetInviteCodeInfoList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetInviteCodeInfoListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertInviteCodeInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertInviteCodeInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteInviteCodeInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeleteInviteCodeInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="SelectPageStaticsInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SelectPageStaticsInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdatePageStaticsInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdatePageStaticsInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPageStaticsInfoList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPageStaticsInfoListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertPageStaticsInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertPageStaticsInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeletePageStaticsInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeletePageStaticsInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="SelectPageStaticsLogInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SelectPageStaticsLogInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdatePageStaticsLogInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdatePageStaticsLogInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPageStaticsLogInfoList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPageStaticsLogInfoListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertPageStaticsLogInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="InsertPageStaticsLogInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeletePageStaticsLogInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeletePageStaticsLogInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="GetActiveInviteCode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetActiveInviteCodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="GetAddSessionValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetAddSessionValueResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="GetUpdateCheckResult">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUpdateCheckResultResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="GetCheckPhoneLogin">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCheckPhoneLoginResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="GetInviteCodeMessage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetInviteCodeMessageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="GetPageStaticsLogInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="data" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPageStaticsLogInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+    </xsd:schema>
+  </wsdl:types>
+
+  <wsdl:message name="SOAPAuth">
+    <wsdl:part name="Auth" element="tns:Auth"/>
+  </wsdl:message>
+
+  <wsdl:message name="SelectUserInfoRequest">
+    <wsdl:part element="tns:SelectUserInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SelectUserInfoResponse">
+    <wsdl:part element="tns:SelectUserInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoRequest">
+    <wsdl:part element="tns:UpdateUserInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoResponse">
+    <wsdl:part element="tns:UpdateUserInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoListRequest">
+    <wsdl:part element="tns:GetUserInfoList" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoListResponse">
+    <wsdl:part element="tns:GetUserInfoListResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertUserInfoRequest">
+    <wsdl:part element="tns:InsertUserInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertUserInfoResponse">
+    <wsdl:part element="tns:InsertUserInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteUserInfoRequest">
+    <wsdl:part element="tns:DeleteUserInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteUserInfoResponse">
+    <wsdl:part element="tns:DeleteUserInfoResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="SelectInviteCodeInfoRequest">
+    <wsdl:part element="tns:SelectInviteCodeInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SelectInviteCodeInfoResponse">
+    <wsdl:part element="tns:SelectInviteCodeInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateInviteCodeInfoRequest">
+    <wsdl:part element="tns:UpdateInviteCodeInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateInviteCodeInfoResponse">
+    <wsdl:part element="tns:UpdateInviteCodeInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetInviteCodeInfoListRequest">
+    <wsdl:part element="tns:GetInviteCodeInfoList" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetInviteCodeInfoListResponse">
+    <wsdl:part element="tns:GetInviteCodeInfoListResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertInviteCodeInfoRequest">
+    <wsdl:part element="tns:InsertInviteCodeInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertInviteCodeInfoResponse">
+    <wsdl:part element="tns:InsertInviteCodeInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteInviteCodeInfoRequest">
+    <wsdl:part element="tns:DeleteInviteCodeInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteInviteCodeInfoResponse">
+    <wsdl:part element="tns:DeleteInviteCodeInfoResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="SelectPageStaticsInfoRequest">
+    <wsdl:part element="tns:SelectPageStaticsInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SelectPageStaticsInfoResponse">
+    <wsdl:part element="tns:SelectPageStaticsInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdatePageStaticsInfoRequest">
+    <wsdl:part element="tns:UpdatePageStaticsInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdatePageStaticsInfoResponse">
+    <wsdl:part element="tns:UpdatePageStaticsInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPageStaticsInfoListRequest">
+    <wsdl:part element="tns:GetPageStaticsInfoList" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPageStaticsInfoListResponse">
+    <wsdl:part element="tns:GetPageStaticsInfoListResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertPageStaticsInfoRequest">
+    <wsdl:part element="tns:InsertPageStaticsInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertPageStaticsInfoResponse">
+    <wsdl:part element="tns:InsertPageStaticsInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeletePageStaticsInfoRequest">
+    <wsdl:part element="tns:DeletePageStaticsInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeletePageStaticsInfoResponse">
+    <wsdl:part element="tns:DeletePageStaticsInfoResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="SelectPageStaticsLogInfoRequest">
+    <wsdl:part element="tns:SelectPageStaticsLogInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SelectPageStaticsLogInfoResponse">
+    <wsdl:part element="tns:SelectPageStaticsLogInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdatePageStaticsLogInfoRequest">
+    <wsdl:part element="tns:UpdatePageStaticsLogInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdatePageStaticsLogInfoResponse">
+    <wsdl:part element="tns:UpdatePageStaticsLogInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPageStaticsLogInfoListRequest">
+    <wsdl:part element="tns:GetPageStaticsLogInfoList" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPageStaticsLogInfoListResponse">
+    <wsdl:part element="tns:GetPageStaticsLogInfoListResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertPageStaticsLogInfoRequest">
+    <wsdl:part element="tns:InsertPageStaticsLogInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InsertPageStaticsLogInfoResponse">
+    <wsdl:part element="tns:InsertPageStaticsLogInfoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeletePageStaticsLogInfoRequest">
+    <wsdl:part element="tns:DeletePageStaticsLogInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeletePageStaticsLogInfoResponse">
+    <wsdl:part element="tns:DeletePageStaticsLogInfoResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="GetActiveInviteCodeRequest">
+    <wsdl:part element="tns:GetActiveInviteCode" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetActiveInviteCodeResponse">
+    <wsdl:part element="tns:GetActiveInviteCodeResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="GetAddSessionValueRequest">
+    <wsdl:part element="tns:GetAddSessionValue" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetAddSessionValueResponse">
+    <wsdl:part element="tns:GetAddSessionValueResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="GetUpdateCheckResultRequest">
+    <wsdl:part element="tns:GetUpdateCheckResult" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetUpdateCheckResultResponse">
+    <wsdl:part element="tns:GetUpdateCheckResultResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="GetCheckPhoneLoginRequest">
+    <wsdl:part element="tns:GetCheckPhoneLogin" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetCheckPhoneLoginResponse">
+    <wsdl:part element="tns:GetCheckPhoneLoginResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="GetInviteCodeMessageRequest">
+    <wsdl:part element="tns:GetInviteCodeMessage" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetInviteCodeMessageResponse">
+    <wsdl:part element="tns:GetInviteCodeMessageResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:message name="GetPageStaticsLogInfoRequest">
+    <wsdl:part element="tns:GetPageStaticsLogInfo" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPageStaticsLogInfoResponse">
+    <wsdl:part element="tns:GetPageStaticsLogInfoResponse" name="parameters"/>
+  </wsdl:message>
+
+  <wsdl:portType name="ManagePlugIn">
+
+    <wsdl:operation name="SelectUserInfo">
+      <wsdl:input message="tns:SelectUserInfoRequest"/>
+      <wsdl:output message="tns:SelectUserInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:input message="tns:UpdateUserInfoRequest"/>
+      <wsdl:output message="tns:UpdateUserInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoList">
+      <wsdl:input message="tns:GetUserInfoListRequest"/>
+      <wsdl:output message="tns:GetUserInfoListResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserInfo">
+      <wsdl:input message="tns:InsertUserInfoRequest"/>
+      <wsdl:output message="tns:InsertUserInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserInfo">
+      <wsdl:input message="tns:DeleteUserInfoRequest"/>
+      <wsdl:output message="tns:DeleteUserInfoResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="SelectInviteCodeInfo">
+      <wsdl:input message="tns:SelectInviteCodeInfoRequest"/>
+      <wsdl:output message="tns:SelectInviteCodeInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInviteCodeInfo">
+      <wsdl:input message="tns:UpdateInviteCodeInfoRequest"/>
+      <wsdl:output message="tns:UpdateInviteCodeInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetInviteCodeInfoList">
+      <wsdl:input message="tns:GetInviteCodeInfoListRequest"/>
+      <wsdl:output message="tns:GetInviteCodeInfoListResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInviteCodeInfo">
+      <wsdl:input message="tns:InsertInviteCodeInfoRequest"/>
+      <wsdl:output message="tns:InsertInviteCodeInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInviteCodeInfo">
+      <wsdl:input message="tns:DeleteInviteCodeInfoRequest"/>
+      <wsdl:output message="tns:DeleteInviteCodeInfoResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="SelectPageStaticsInfo">
+      <wsdl:input message="tns:SelectPageStaticsInfoRequest"/>
+      <wsdl:output message="tns:SelectPageStaticsInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePageStaticsInfo">
+      <wsdl:input message="tns:UpdatePageStaticsInfoRequest"/>
+      <wsdl:output message="tns:UpdatePageStaticsInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageStaticsInfoList">
+      <wsdl:input message="tns:GetPageStaticsInfoListRequest"/>
+      <wsdl:output message="tns:GetPageStaticsInfoListResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPageStaticsInfo">
+      <wsdl:input message="tns:InsertPageStaticsInfoRequest"/>
+      <wsdl:output message="tns:InsertPageStaticsInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageStaticsInfo">
+      <wsdl:input message="tns:DeletePageStaticsInfoRequest"/>
+      <wsdl:output message="tns:DeletePageStaticsInfoResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="SelectPageStaticsLogInfo">
+      <wsdl:input message="tns:SelectPageStaticsLogInfoRequest"/>
+      <wsdl:output message="tns:SelectPageStaticsLogInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePageStaticsLogInfo">
+      <wsdl:input message="tns:UpdatePageStaticsLogInfoRequest"/>
+      <wsdl:output message="tns:UpdatePageStaticsLogInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageStaticsLogInfoList">
+      <wsdl:input message="tns:GetPageStaticsLogInfoListRequest"/>
+      <wsdl:output message="tns:GetPageStaticsLogInfoListResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPageStaticsLogInfo">
+      <wsdl:input message="tns:InsertPageStaticsLogInfoRequest"/>
+      <wsdl:output message="tns:InsertPageStaticsLogInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageStaticsLogInfo">
+      <wsdl:input message="tns:DeletePageStaticsLogInfoRequest"/>
+      <wsdl:output message="tns:DeletePageStaticsLogInfoResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetActiveInviteCode">
+      <wsdl:input message="tns:GetActiveInviteCodeRequest"/>
+      <wsdl:output message="tns:GetActiveInviteCodeResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetAddSessionValue">
+      <wsdl:input message="tns:GetAddSessionValueRequest"/>
+      <wsdl:output message="tns:GetAddSessionValueResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetUpdateCheckResult">
+      <wsdl:input message="tns:GetUpdateCheckResultRequest"/>
+      <wsdl:output message="tns:GetUpdateCheckResultResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetCheckPhoneLogin">
+      <wsdl:input message="tns:GetCheckPhoneLoginRequest"/>
+      <wsdl:output message="tns:GetCheckPhoneLoginResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetInviteCodeMessage">
+      <wsdl:input message="tns:GetInviteCodeMessageRequest"/>
+      <wsdl:output message="tns:GetInviteCodeMessageResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetPageStaticsLogInfo">
+      <wsdl:input message="tns:GetPageStaticsLogInfoRequest"/>
+      <wsdl:output message="tns:GetPageStaticsLogInfoResponse"/>
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+  <wsdl:binding name="ManagePlugInSOAP" type="tns:ManagePlugIn">
+    <soap:binding style="document"
+      transport="http://schemas.xmlsoap.org/soap/http" />
+
+    <wsdl:operation name="SelectUserInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/SelectUserInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/UpdateUserInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoList">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetUserInfoList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/InsertUserInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/DeleteUserInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="SelectInviteCodeInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/SelectInviteCodeInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInviteCodeInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/UpdateInviteCodeInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInviteCodeInfoList">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetInviteCodeInfoList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInviteCodeInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/InsertInviteCodeInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInviteCodeInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/DeleteInviteCodeInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="SelectPageStaticsInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/SelectPageStaticsInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePageStaticsInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/UpdatePageStaticsInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageStaticsInfoList">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetPageStaticsInfoList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPageStaticsInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/InsertPageStaticsInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageStaticsInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/DeletePageStaticsInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="SelectPageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/SelectPageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/UpdatePageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageStaticsLogInfoList">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetPageStaticsLogInfoList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/InsertPageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/DeletePageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="SelectPageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/SelectPageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/UpdatePageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageStaticsLogInfoList">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetPageStaticsLogInfoList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/InsertPageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/DeletePageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetActiveInviteCode">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetActiveInviteCode" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetAddSessionValue">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetAddSessionValue" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetUpdateCheckResult">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetUpdateCheckResult" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetCheckPhoneLogin">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetCheckPhoneLogin" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetInviteCodeMessage">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetInviteCodeMessage" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="GetPageStaticsLogInfo">
+      <soap:operation
+        soapAction="http://plus.dbowner.com/ManagePlugIn/GetPageStaticsLogInfo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SOAPAuth" part="Auth"
+          use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+  <wsdl:service name="ManagePlugIn">
+    <wsdl:port binding="tns:ManagePlugInSOAP" name="ManagePlugInSOAP">
+      <soap:address location="http://plus.dbowner.com/soap/plugInSoap?wsdl"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
